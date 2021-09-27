@@ -7,103 +7,112 @@
     flex-direction: column;
     &.night{
         background: rgb(27,40,88);
-        background: linear-gradient(0deg, rgba(27,40,88,1) 0%, rgba(0,43,72,1) 49%, rgba(44,53,103,1) 100%);    
-        .city{
-            color: #fff;
-        }
-        .dawndusk{
-            color: #fff;
-        }
-        .temp{
-            color: #fff;
-        }
-        .weathername{
-            color: #fff;
-        }
-        .dayData{
-            color: #e8e8e8;
+        background: linear-gradient(0deg, rgba(27,40,88,1) 0%, rgba(0,43,72,1) 49%, rgba(44,53,103,1) 100%);
+        .card{
+            .city{
+                color: #fff;
+            }
+            .dawndusk{
+                color: #fff;
+            }
+            .temp{
+                color: #fff;
+            }
+            .weathername{
+                color: #fff;
+            }
+            .dayData{
+                color: #e8e8e8;
+            }
         }
     }
+
     &.day{
         background: rgb(251,175,74);
         background: linear-gradient(0deg, rgba(251,175,74,1) 0%, rgba(251,181,86,1) 49%, rgba(251,199,113,1) 100%);
-        .city{
-            color: #fff;
-        }
-        .dawndusk{
-            color: #fff;
-        }
-        .temp{
-            color: #fff;
-        }
-        .weathername{
-            color: #fff;
-        }
-        .dayData{
-            color: #fff;
-        }
-    }
-    .weather{
-        .weathericon{
-            width: 20em;
-            height: 20em;
-            margin-bottom: 2em;
+        .card{
+            .city{
+                color: #fff;
+            }
+            .dawndusk{
+                color: #fff;
+            }
+            .temp{
+                color: #fff;
+            }
+            .weathername{
+                color: #fff;
+            }
+            .dayData{
+                color: #fff;
+            }
         }
     }
-    .city{
-        display: block;
-        font-weight: 500;
-        font-size: 2.3em;
-        padding-left: .5em;
-        text-transform: uppercase;
-        letter-spacing: .4em;
-        margin-bottom: .5em;
-        color: #51565D;
-    }
-    .weathername{
+    .card{
+        // width: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
-        letter-spacing: .5em;
-        width: 60%;
-        text-transform: uppercase;
-        font-size: 1.3em;
-        font-weight: 500;
-        color: #51565D;
-        margin-bottom: .6em;
-    }
-    .dayData{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 45%;
-        text-transform: uppercase;
-        font-size: .9em;
-        color: #51565D;
-        .day{
-            // padding-right: 1em;
+        align-items: center;
+        flex-direction: column;
+        background: none;
+    
+        .city{
+            display: block;
+            font-weight: 500;
+            font-size: 2.3em;
+            padding-left: .5em;
+            text-transform: uppercase;
+            letter-spacing: .4em;
+            margin-bottom: .5em;
+            color: #51565D;
         }
-        .date{
-            // padding: 0 1em;
+    
+        .dawndusk{
+            display: flex;
+            color: #51565D;;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+            text-transform: uppercase;
+            font-size: .8em;
+            margin-bottom: 5em;
         }
-        .time{
-            // padding-left: 1em;
+    
+        .weather{
+            .weathericon{
+                width: 20em;
+                height: 20em;
+                margin-bottom: 2em;
+            }
         }
-    }
-
-    .dawndusk{
-        display: flex;
-        color: #51565D;;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 65%;
-        text-transform: uppercase;
-        font-size: .8em;
-        margin-bottom: 5em;
-    }
-
-    .temp{
-        font-size: 3em;
-        font-weight: 700;
-        margin-bottom: .6em;
+    
+        .temp{
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: .6em;
+        }
+    
+        .weathername{
+            display: flex;
+            justify-content: center;
+            letter-spacing: .5em;
+            width: 60%;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: 500;
+            color: #51565D;
+            margin-bottom: .6em;
+        }
+    
+        .dayData{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 53%;
+            text-transform: uppercase;
+            font-size: .9em;
+            color: #51565D;
+        }
     }
 }

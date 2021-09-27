@@ -4,7 +4,6 @@ export default function App() {
   
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
-  // const [iconcode, setIconcode] = useState([]);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -18,7 +17,6 @@ export default function App() {
       .then(res => res.json())
       .then(result => {
         setData(result)
-        console.log(result);
       });
     }
     fetchData();
