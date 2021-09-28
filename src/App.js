@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Weather from './components/weather/weather';
+import './App.css';
+
+const loaded = () => {
+  const element = document.getElementById('App');
+  element.classList.add('none');
+}
+
 export default function App() {
   
   const [lat, setLat] = useState([]);
@@ -23,11 +30,11 @@ export default function App() {
   }, [lat,long])
   
   return (
-    <div className="App">
+    <div id="App">
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
-        <div></div>
+        <div className="lds-ripple"><div></div><div></div></div>
       )}
       
     </div>
