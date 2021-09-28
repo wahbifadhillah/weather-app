@@ -2,11 +2,6 @@ import React, { useEffect, useState } from "react";
 import Weather from './components/weather/weather';
 import './App.css';
 
-const loaded = () => {
-  const element = document.getElementById('App');
-  element.classList.add('none');
-}
-
 export default function App() {
   
   const [lat, setLat] = useState([]);
