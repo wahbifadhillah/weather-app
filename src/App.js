@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Weather from './components/weather/weather';
 import './App.css';
 
+const refresh = () => {
+  window.location.reload();
+}
+
 export default function App() {
   
   const [lat, setLat] = useState([]);
@@ -29,7 +33,13 @@ export default function App() {
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
-        <div className="lds-ripple"><div></div><div></div></div>
+        <div className="loader">
+          <div className="lds-ripple"><div></div><div></div></div>
+          <div className="warning">Not loading?</div>
+          <div className="refresh">
+              <button className="refreshBtn" onClick={refresh}>Refresh</button>
+          </div>
+        </div>
       )}
       
     </div>
